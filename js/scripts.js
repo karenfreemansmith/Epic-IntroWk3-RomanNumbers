@@ -6,6 +6,9 @@ $("form").submit(function(event){
 
 //Backend Logic...
 function romanize(aNumber){
-  var romanNumber=aNumber;
+  var romanNumber="";
+  if (aNumber > 3999) {
+    romanNumber=("Sorry, maybe you should read the directions.")
+  }
   return romanNumber;
-}
+} 
