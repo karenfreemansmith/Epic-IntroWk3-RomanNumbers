@@ -45,7 +45,12 @@ function romanize(aNumber){
     }
     aNumber-=5*count;
     count=0;
-
+    for(var i=1;i<=parseInt(aNumber/1);i++) {
+      romanNumber+="I";
+      count=i;
+    }
+    aNumber-=1*count;
+    count=0;
   } else {
     romanNumber=("Sorry, maybe you should read the directions.");
   }
