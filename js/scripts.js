@@ -24,6 +24,10 @@ function romanize(aNumber){
       count=i;
     }
     aNumber-=100*count;
+    for(var i=1;i<=parseInt(aNumber/50);i++) {
+      romanNumber+="L";
+      count=i;
+    }
   } else {
     romanNumber=("Sorry, maybe you should read the directions.");
   }
