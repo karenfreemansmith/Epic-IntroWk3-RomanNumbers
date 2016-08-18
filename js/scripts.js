@@ -19,7 +19,11 @@ function romanize(aNumber){
       count=i;
     }
     aNumber-=500*count;
-
+    for(var i=1;i<=parseInt(aNumber/100);i++) {
+      romanNumber+="C";
+      count=i;
+    }
+    aNumber-=100*count;
   } else {
     romanNumber=("Sorry, maybe you should read the directions.");
   }
