@@ -76,7 +76,7 @@ function romanize(aNumber){
     aNumber-=1*count;
     count=0;
   } else {
-    romanNumber=("Sorry, maybe you should read the directions.");
+    romanNumber=("Sorry, too many people died... tomorrow it's your turn!");
   }
   return romanNumber;
 }

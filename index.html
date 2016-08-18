@@ -3,16 +3,23 @@
   <head>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <title></title>
+    <title>Report to your Emperor</title>
   </head>
   <body>
     <div class="container">
+    <h1>Report to your Emperor - <br><span id="results"></span></h1>
       <form>
-        <label for="userNumber">Enter a number to convert into Roman Numerals. Remember, we can only convert up to 3,999.</label>
-        <input id="userNumber" type="number">
-        <button type="submit" class="btn">Submit!</button>
+        <p>Welcome to Rome!</p>
+        <p>You have just been designated as the Emperor's new body counter. Your job, whether you like it or not, will be to report the number of dead bodies in the arena at the end of each day.</p>
+        <p>The emperor requires this number to be reported in the proper format. If you fail to do this, you will be featured in the arena tomorrow... with the lions.</p>
+        <div class="form-group">
+          <label for="userNumber">Enter a number less than 3,999 here to discover the proper format:</label>
+          <input id="userNumber" class="form-control" type="number">
+        </div>
+        <button type="submit" class="btn btn-danger  form-control">Convert or Die!</button>
+
       </form>
-      <h2 id="results"></h2>
+
     </div>
 
   <script src="js/jquery-3.1.0.js"></script>
