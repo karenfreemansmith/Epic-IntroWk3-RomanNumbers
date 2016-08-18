@@ -15,6 +15,10 @@ function romanize(aNumber){
     }
     aNumber-=1000*count;
     count=0;
+    if (aNumber>=900) {
+      romanNumber+="CM";
+      aNumber-=900;
+    }
     for(var i=1;i<=parseInt(aNumber/500);i++) {
       romanNumber+="D";
       count=i;
@@ -27,6 +31,10 @@ function romanize(aNumber){
     }
     aNumber-=100*count;
     count=0;
+    if (aNumber>=90) {
+      romanNumber+="XC";
+      aNumber-=90;
+    }
     for(var i=1;i<=parseInt(aNumber/50);i++) {
       romanNumber+="L";
       count=i;
@@ -39,6 +47,10 @@ function romanize(aNumber){
     }
     aNumber-=10*count;
     count=0;
+    if (aNumber>=9) {
+      romanNumber+="IX";
+      aNumber-=9;
+    }
     for(var i=1;i<=parseInt(aNumber/5);i++) {
       romanNumber+="V";
       count=i;
