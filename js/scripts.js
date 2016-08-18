@@ -39,6 +39,12 @@ function romanize(aNumber){
     }
     aNumber-=10*count;
     count=0;
+    for(var i=1;i<=parseInt(aNumber/5);i++) {
+      romanNumber+="V";
+      count=i;
+    }
+    aNumber-=5*count;
+    count=0;
 
   } else {
     romanNumber=("Sorry, maybe you should read the directions.");
