@@ -8,7 +8,9 @@ $("form").submit(function(event){
 function romanize(aNumber){
   var romanNumber="";
   var count=0;
-  if (aNumber <= 3999) {
+  if(aNumber<=0){
+    romanNumber="Oh, no! You better watch out for those zombies!"
+  } else if (aNumber <= 3999) {
     for(var i=1;i<=parseInt(aNumber/1000);i++) {
       romanNumber+="M";
       count=i;
