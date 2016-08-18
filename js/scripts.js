@@ -25,6 +25,10 @@ function romanize(aNumber){
     }
     aNumber-=500*count;
     count=0;
+    if (aNumber>=400) {
+      romanNumber+="CD";
+      aNumber-=400;
+    }
     for(var i=1;i<=parseInt(aNumber/100);i++) {
       romanNumber+="C";
       count=i;
@@ -41,6 +45,10 @@ function romanize(aNumber){
     }
     aNumber-=50*count;
     count=0;
+    if (aNumber>=40) {
+      romanNumber+="XL";
+      aNumber-=40;
+    }
     for(var i=1;i<=parseInt(aNumber/10);i++) {
       romanNumber+="X";
       count=i;
@@ -57,6 +65,10 @@ function romanize(aNumber){
     }
     aNumber-=5*count;
     count=0;
+    if (aNumber>=4) {
+      romanNumber+="IV";
+      aNumber-=4;
+    }
     for(var i=1;i<=parseInt(aNumber/1);i++) {
       romanNumber+="I";
       count=i;
