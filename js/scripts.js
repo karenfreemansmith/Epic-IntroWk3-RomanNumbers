@@ -14,20 +14,32 @@ function romanize(aNumber){
       count=i;
     }
     aNumber-=1000*count;
+    count=0;
     for(var i=1;i<=parseInt(aNumber/500);i++) {
       romanNumber+="D";
       count=i;
     }
     aNumber-=500*count;
+    count=0;
     for(var i=1;i<=parseInt(aNumber/100);i++) {
       romanNumber+="C";
       count=i;
     }
     aNumber-=100*count;
+    count=0;
     for(var i=1;i<=parseInt(aNumber/50);i++) {
       romanNumber+="L";
       count=i;
     }
+    aNumber-=50*count;
+    count=0;
+    for(var i=1;i<=parseInt(aNumber/10);i++) {
+      romanNumber+="X";
+      count=i;
+    }
+    aNumber-=10*count;
+    count=0;
+
   } else {
     romanNumber=("Sorry, maybe you should read the directions.");
   }
